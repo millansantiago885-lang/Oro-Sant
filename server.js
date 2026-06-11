@@ -6,7 +6,7 @@ const url  = require('url');
 const PORT      = process.env.PORT || 3000;
 const DB_PATH   = path.join(__dirname, 'data', 'db.json');
 const PUB_DIR   = path.join(__dirname, 'public');
-const ADMIN_PASS = process.env.ADMIN_PASS || 'admin123';
+const ADMIN_PASS = process.env.ADMIN_PASS || 'admin1234';
 
 const MIME = {
   '.html':'text/html; charset=utf-8', '.js':'application/javascript',
