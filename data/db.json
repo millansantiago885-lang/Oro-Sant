@@ -2,32 +2,24 @@
   "config": {
     "name": "ORO SANTO",
     "wa": "573001234567",
-    "msg": "Hola, me interesa {producto}, ¿está disponible?",
-    "banner": "Envíos Colombia · Garantía de calidad · Joyas únicas · Atención personalizada · Pago contra entrega"
+    "banner": "Envíos Colombia · Garantía de calidad · Pago contra entrega · Atención personalizada"
   },
-  "categories": ["Anillos", "Collares", "Aretes", "Pulseras", "Dijes"],
+  "categories": ["Cadenas", "Topos", "Anillos", "Pulseras"],
+  "combos": [
+    { "id": "c1", "catA": "Cadenas", "catB": "Topos", "label": "Completa tu look", "desc": "Agrega unos topos y ahorra", "discount": 5000 }
+  ],
+  "comboPairs": {
+    "CAD-001": ["TOP-003"],
+    "CAD-002": ["TOP-001"],
+    "CAD-003": ["TOP-002"]
+  },
   "products": [
-    {
-      "id": "demo1",
-      "name": "Anillo Solitario Oro 18K",
-      "cat": "Anillos",
-      "ref": "ANI-001",
-      "price": 450000,
-      "oldPrice": 580000,
-      "desc": "Hermoso anillo solitario en oro de 18 kilates con piedra central de circón AAA. Disponible en tallas 5 a 10.",
-      "badge": "Nuevo",
-      "img": null
-    },
-    {
-      "id": "demo2",
-      "name": "Collar Cadena Fígaro",
-      "cat": "Collares",
-      "ref": "COL-012",
-      "price": 320000,
-      "oldPrice": null,
-      "desc": "Cadena tipo fígaro en oro laminado de alta duración. Largo 45cm.",
-      "badge": null,
-      "img": null
-    }
-  ]
+    { "id": "p1", "code": "CAD-001-45", "family": "CAD-001", "name": "Cadena Cubana", "cat": "Cadenas", "variant": "45 cm", "cost": 35000, "price": 79900, "stock": 5, "reserved": 1, "img": null, "badge": null },
+    { "id": "p2", "code": "CAD-001-50", "family": "CAD-001", "name": "Cadena Cubana", "cat": "Cadenas", "variant": "50 cm", "cost": 39000, "price": 84900, "stock": 2, "reserved": 0, "img": null, "badge": null },
+    { "id": "p3", "code": "CAD-002-45", "family": "CAD-002", "name": "Cadena Espejo", "cat": "Cadenas", "variant": "45 cm", "cost": 32000, "price": 74900, "stock": 3, "reserved": 1, "img": null, "badge": null },
+    { "id": "p4", "code": "TOP-001", "family": "TOP-001", "name": "Topos Corazón", "cat": "Topos", "variant": "Única", "cost": 12000, "price": 34900, "stock": 8, "reserved": 2, "img": null, "badge": null },
+    { "id": "p5", "code": "TOP-002", "family": "TOP-002", "name": "Topos Mariposa", "cat": "Topos", "variant": "Única", "cost": 11000, "price": 32900, "stock": 0, "reserved": 0, "img": null, "badge": null },
+    { "id": "p6", "code": "TOP-003", "family": "TOP-003", "name": "Topos Punto de Luz", "cat": "Topos", "variant": "Única", "cost": 10000, "price": 29900, "stock": 4, "reserved": 0, "img": null, "badge": null }
+  ],
+  "orders": []
 }
