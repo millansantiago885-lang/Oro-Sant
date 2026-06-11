@@ -95,18 +95,20 @@ const server = http.createServer(async (req, res) => {
       return;
     }
 
-    // AUTH check
-    const token  = (req.headers['authorization']||'').replace('Bearer ','');
-    const isAuth = token === Buffer.from(ADMIN_PASS).toString('base64');
-    if(!isAuth){ json(res,{ok:false,msg:'No autorizado'},401); return; }
-
     // ── LOGIN ──
-    if(pathname==='/api/login' && req.method==='POST') {
-      const body = await readBody(req);
-      if(body.pass===ADMIN_PASS) json(res,{ok:true,token:Buffer.from(ADMIN_PASS).toString('base64')});
-      else json(res,{ok:false,msg:'Contraseña incorrecta'},401);
-      return;
-    }
+if(pathname==='/api/login' && req.method==='POST') {
+  const body = await readBody(req);
+  if(body.pass===ADMIN_PASS) json(res,{ok:true,token:Buffer.from(ADMIN_PASS).toString('base64')});
+  else json(res,{ok:false,msg:'Contraseña incorrecta'},401);
+  return;
+}
+
+// AUTH check
+const token  = (req.headers['authorization']||'').replace('Bearer ','');
+const isAuth = token === Buffer.from(ADMIN_PASS).toString('base64');
+if(!isAuth){ json(res,{ok:false,msg:'No autorizado'},401); return; }
+
+ 
 
     // ── PRODUCTS CRUD ──
     if(pathname==='/api/products' && req.method==='GET') {
